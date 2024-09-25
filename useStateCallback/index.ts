@@ -13,6 +13,7 @@ export function useCallbackState<T>() {
       new CustomEvent("state-change", { detail: state })
     );
   }, [state]);
+  
 
   const setState: Dispatch<
     React.SetStateAction<T | undefined>,
