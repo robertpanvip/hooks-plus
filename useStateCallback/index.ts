@@ -5,7 +5,7 @@ import React from "react";
 type Dispatch<A, B> = (a: A, c?: B) => void;
 
 /**类似class的setState 有一个监听设置值成功之后的回调**/
-export function useStateCallback<T>() {
+export function useCallbackState<T>() {
   const [state, _setState] = React.useState<T>();
   const targetRef = React.useRef<EventTarget>(new EventTarget());
   useUpdateEffect(() => {
